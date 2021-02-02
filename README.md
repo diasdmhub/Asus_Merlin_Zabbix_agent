@@ -21,7 +21,8 @@ Copy the script to your router and execute it like so:
   <LI>/jffs/scripts/zbx_ag_inst_awrt.sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
 </UL>
 </i>
-<BR>If you prefer to download directly to your router, try this:
+
+If you prefer to download directly to your router, try this:
 <i>
 <UL>
   <LI>wget https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin/main/zbx_ag_inst_awrt.sh | sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
@@ -31,4 +32,10 @@ Copy the script to your router and execute it like so:
 
 <strong><p>* Change "<i><ZABBIX_SERVER_IP_OR_DOMAIN_NAME></i>" for your own Zabbix server IP address or domain name.</strong>
   
-<strong><i><p>** Tested as is on a Asus RT-AC86U router.</i></strong>
+<BR><strong>TESTED AS IS</strong>
+<BR>
+<strong><i>
+  This script was tested only with an Asus RT-AC86U router running a Asus Merlin firmware.
+  It should work with other Asus routers as well
+  Any feedback are welcome.
+</i></strong>
