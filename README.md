@@ -18,12 +18,12 @@ Copy the script to your router "/jffs/scripts/" directory and execute it like so
 <i>
 <UL>
   <LI>chmod +x /jffs/scripts/zbx_ag_inst_awrt.sh
-  <LI>/jffs/scripts/zbx_ag_inst_awrt.sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
+  <LI>/jffs/scripts/zbx_ag_inst_awrt.sh [ZABBIX_SERVER_IP_OR_DOMAIN_NAME]
 </UL>
 </i>
 
 
-<strong><p>* Change "<i><ZABBIX_SERVER_IP_OR_DOMAIN_NAME></i>" for your own Zabbix server IP address or domain name.</strong>
+<strong><p>* Change "<i>[ZABBIX_SERVER_IP_OR_DOMAIN_NAME]</i>" for your own Zabbix server IP address or domain name.</strong>
 
 <BR><strong><a href="https://github.com/diasdmhub/Zabbix_Template_Asus_Merlin">TRY OUT MY ASUS WRT ROUTER TEMPLATE</a></strong>
 
