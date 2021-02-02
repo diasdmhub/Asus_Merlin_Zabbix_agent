@@ -14,7 +14,7 @@ If you want to monitor your Asus SOHO router using a Zabbix agent, this script o
 
 ### USAGE
 
-Copy the script to your router and execute it like so:
+Copy the script to your router "/jffs/scripts/" directory and execute it like so:
 <i>
 <UL>
   <LI>chmod +x /jffs/scripts/zbx_ag_inst_awrt.sh
@@ -25,7 +25,7 @@ Copy the script to your router and execute it like so:
 If you prefer to download directly to your router, try this:
 <i>
 <UL>
-  <LI>wget https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin/main/zbx_ag_inst_awrt.sh | sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
+  <LI>wget https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin/blob/main/zbx_ag_inst_awrt.sh | sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
 </UL>
 </i>
 
