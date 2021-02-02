@@ -32,7 +32,7 @@ If you prefer to download directly to your router, try this:
 
 <strong><p>* Change "<i><ZABBIX_SERVER_IP_OR_DOMAIN_NAME></i>" for your own Zabbix server IP address or domain name.</strong>
 
-<BR><strong>TRY OUT MY ASUS WRT ROUTER TEMPLATE</strong>
+<BR><strong><a href="https://github.com/diasdmhub/Zabbix_Template_Asus_Merlin">TRY OUT MY ASUS WRT ROUTER TEMPLATE</a></strong>
 
 <strong>TESTED AS IS</strong>
 <BR>
