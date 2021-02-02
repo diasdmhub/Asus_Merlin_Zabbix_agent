@@ -31,11 +31,13 @@ If you prefer to download directly to your router, try this:
 
 
 <strong><p>* Change "<i><ZABBIX_SERVER_IP_OR_DOMAIN_NAME></i>" for your own Zabbix server IP address or domain name.</strong>
-  
-<BR><strong>TESTED AS IS</strong>
+
+<BR><strong>TRY OUT MY ASUS WRT ROUTER TEMPLATE</strong>
+
+<strong>TESTED AS IS</strong>
 <BR>
 <strong><i>
-  This script was tested only with an Asus RT-AC86U router running a Asus Merlin firmware.
+  This script was tested only with an Asus RT-AC86U router running an Asus Merlin firmware.
   It should work with other Asus routers as well
   Any feedback are welcome.
 </i></strong>
