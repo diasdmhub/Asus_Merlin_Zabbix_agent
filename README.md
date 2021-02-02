@@ -22,13 +22,6 @@ Copy the script to your router "/jffs/scripts/" directory and execute it like so
 </UL>
 </i>
 
-If you prefer to download directly to your router, try this:
-<i>
-<UL>
-  <LI>wget https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin/blob/main/zbx_ag_inst_awrt.sh | sh <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>
-</UL>
-</i>
-
 
 <strong><p>* Change "<i><ZABBIX_SERVER_IP_OR_DOMAIN_NAME></i>" for your own Zabbix server IP address or domain name.</strong>
 
