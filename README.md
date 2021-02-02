@@ -8,6 +8,7 @@ If you want to monitor your Asus SOHO router using a Zabbix agent, this script o
 <UL>
   <LI>Asus WRT Router with Merlin firmware
   <LI>Entware installed
+  <LI>Have no previous installation for Zabbix Agent
   <LI><a href="https://www.snbforums.com/threads/rt-ac86u-with-zabbix-agent.64343/#post-645193">Read Zabbix Agent forum discussion</a>
 </UL>
 
