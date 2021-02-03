@@ -68,7 +68,7 @@ rm /tmp/$CONF_FILE.tmp
 
 #007 STARTING AGENT
 
-zabbix_agentd -c /opt/etc/zabbix_agentd.conf
+zabbix_agentd -c $CONF_DIR/$CONF_FILE
 
 ZBXAGSTATUS=$(/opt/etc/init.d/S07zabbix_agentd check | awk '{print $5}')
 echo -e "ZABBIX AGENT IS $ZBXAGSTATUS\n"
