@@ -18,8 +18,8 @@ If you want to monitor your Asus SOHO router using a Zabbix agent, this script o
 Copy the script to your router "/jffs/scripts/" directory and start it:
 <i>
 <UL>
-  <LI>chmod +x /jffs/scripts/zbx_ag_inst_awrt.sh
-  <LI>/jffs/scripts/zbx_ag_inst_awrt.sh [ZABBIX_SERVER_IP_OR_DOMAIN_NAME]
+  <LI><code>chmod +x /jffs/scripts/zbx_ag_inst_awrt.sh</code>
+  <LI><code>/jffs/scripts/zbx_ag_inst_awrt.sh [ZABBIX_SERVER_IP_OR_DOMAIN_NAME]</code>
 </UL>
 </i>
 
