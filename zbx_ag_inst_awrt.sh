@@ -54,7 +54,6 @@ opkg install zabbix-agentd
 #006 WRINTING ASUSWRT CONFIGURATION FILE
 
 cp -p $CONF_DIR/$CONF_FILE $CONF_DIR/$CONF_FILE.bkp
-cp $CONF_DIR/$CONF_FILE /tmp/$CONF_FILE.tmp
 
 sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" $CONF_DIR/$CONF_FILE
 
