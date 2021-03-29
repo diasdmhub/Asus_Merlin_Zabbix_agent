@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # ZABBIX AGENT INSTALATION FOR ASUS WRT ROUTER
-# alpha v1
+# https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
+# beta v1
 # by Diasdm
 
 
@@ -12,6 +13,7 @@ SCRIPTNAME="zbx_ag_inst_awrt.sh"
 
 CONF_FILE="zabbix_agentd.conf"
 CONF_DIR="/opt/etc"
+CONF_ASUS="asus_$CONF_FILE"
 
 ZBXAGFIND=$(opkg find zabbix-agentd)  # PACKAGE NAME: CHANGE IF NECESSARY.
 ZBXAGVERSION=$(echo $ZBXAGFIND | cut -d " " -f 3)
@@ -41,12 +43,12 @@ if [ "$ZBXSERVER" == "" -o "$ZBXSERVER" == " " ]; then
 	exit 3;
 fi
 
-cp -p ./$SCRIPTNAME $SCRIPTDIR/$SCRIPTNAME
+#cp -p ./$SCRIPTNAME $SCRIPTDIR/$SCRIPTNAME
 
 
 #005 INSTALATION
 
-opkg -V2 install zabbix-agentd
+opkg install zabbix-agentd
 
 
 #006 WRINTING ASUSWRT CONFIGURATION FILE
@@ -54,21 +56,24 @@ opkg -V2 install zabbix-agentd
 cp -p $CONF_DIR/$CONF_FILE $CONF_DIR/$CONF_FILE.bkp
 cp $CONF_DIR/$CONF_FILE /tmp/$CONF_FILE.tmp
 
-sed -i 's/# LogFileSize=1/LogFileSize=1/' /tmp/$CONF_FILE.tmp
-sed -i 's/DenyKey=system.run\[\*\]/# DenyKey=system.run\[\*\]/' /tmp/$CONF_FILE.tmp
-sed -i 's/# EnableRemoteCommands=0/EnableRemoteCommands=1/' /tmp/$CONF_FILE.tmp
-sed -i 's/# LogRemoteCommands=0/LogRemoteCommands=1/' /tmp/$CONF_FILE.tmp
-sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" /tmp/$CONF_FILE.tmp
-sed -i 's/# AllowRoot=0/AllowRoot=1/' /tmp/$CONF_FILE.tmp
+sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" $CONF_DIR/$CONF_FILE
 
-cat /tmp/$CONF_FILE.tmp > $CONF_DIR/$CONF_FILE
 
-rm /tmp/$CONF_FILE.tmp
+cat > $CONF_DIR/$CONF_FILE.d/$CONF_ASUS <<- EOF
+	# ASUS WRT SPECIFIC OPTIONS FOR ZABBIX AGENT
+	# https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
+
+	Hostname=$HOSTNAME
+	LogRemoteCommands=1
+	AllowKey=system.run[*]
+	AllowRoot=1
+EOF
+
 
 
 #007 STARTING AGENT
 
-zabbix_agentd -c $CONF_DIR/$CONF_FILE
+$CONF_DIR/init.d/S07zabbix_agentd start
 
 ZBXAGSTATUS=$(/opt/etc/init.d/S07zabbix_agentd check | awk '{print $5}')
 echo -e "ZABBIX AGENT IS $ZBXAGSTATUS\n"
