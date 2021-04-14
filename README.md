@@ -29,9 +29,8 @@ Copy the script to your router "/jffs/scripts/" directory and start it:
 <BR><strong><a href="https://github.com/diasdmhub/Zabbix_Template_Asus_Merlin">TRY OUT MY ASUS WRT ROUTER TEMPLATE</a></strong>
 
 <strong>TESTED AS IS</strong>
-<BR>
 <strong><i>
-  This script was tested only with Asus RT-AC86U / RT-AC87U / RT-AX86U router running a Asus Merlin firmware.
-  It should work with other Asus routers as well.
-  Feedbacks are welcome.
+  <BR>This script was tested only with Asus RT-AC86U / RT-AC87U / RT-AX86U router running a Asus Merlin firmware.
+  <BR>It should work with other Asus routers as well.
+  <BR>Feedbacks are welcome.
 </i></strong>
