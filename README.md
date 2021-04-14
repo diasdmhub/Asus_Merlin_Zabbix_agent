@@ -33,5 +33,5 @@ Copy the script to your router "/jffs/scripts/" directory and start it:
 <strong><i>
   This script was tested only with Asus RT-AC86U / RT-AC87U / RT-AX86U router running a Asus Merlin firmware.
   It should work with other Asus routers as well.
-  Any feedback are welcome.
+  Feedbacks are welcome.
 </i></strong>
