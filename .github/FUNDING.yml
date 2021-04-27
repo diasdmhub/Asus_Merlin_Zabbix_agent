@@ -9,4 +9,10 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-custom: https://www.paypal.com/donate?business=6FAVMAA4VLWC2&item_name=AsusWRT+ZBX+Template+Coffe&currency_code=BRL
+custom: <form action="https://www.paypal.com/donate" method="post" target="_top">
+<input type="hidden" name="business" value="6FAVMAA4VLWC2" />
+<input type="hidden" name="item_name" value="AsusWRT Zbx Template Coffe" />
+<input type="hidden" name="currency_code" value="BRL" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+</form>
