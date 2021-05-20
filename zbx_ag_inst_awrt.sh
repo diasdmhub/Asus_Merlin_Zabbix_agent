@@ -63,7 +63,6 @@ cat > $CONF_DIR/$CONF_FILE.d/$CONF_ASUS <<- EOF
 	# https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
 
 	Hostname=$HOSTNAME
-	LogRemoteCommands=1
 	AllowKey=system.run[*]
 	AllowRoot=1
 EOF
