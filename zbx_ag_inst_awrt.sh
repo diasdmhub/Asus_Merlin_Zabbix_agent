@@ -2,7 +2,7 @@
 
 # ZABBIX AGENT INSTALATION FOR ASUS WRT ROUTER
 # https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
-# beta v1
+# v1
 # by Diasdm
 
 
@@ -23,8 +23,8 @@ ZBXSERVER=$1
 #002 CHECK IF ZABBIX AGENT IS AVAILABLE
 
 if [ "$ZBXAGFIND" == "" ]; then
-	echo -e "\n**ZABBIX AGENT PACKAGE NOT AVAILABLE**\n\n"
-	exit 2;
+        echo -e "\n**ZABBIX AGENT PACKAGE NOT AVAILABLE**\n\n"
+        exit 2;
 fi
 
 
@@ -38,12 +38,10 @@ echo -e "INSTALLING...\n\n"
 #004 CHECK IF USER TYPED A ZABBIX SERVER IP/DOMAIN
 
 if [ "$ZBXSERVER" == "" -o "$ZBXSERVER" == " " ]; then
-	echo -e "\nNO IP OR DOMAIN NAME WAS SET. TRY AGAIN.\n"
-	echo -e "USAGE: $SCRIPTDIR/$SCRIPTNAME <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>\n"
-	exit 3;
+        echo -e "\nNO IP OR DOMAIN NAME WAS SET. TRY AGAIN.\n"
+        echo -e "USAGE: $SCRIPTDIR/$SCRIPTNAME <ZABBIX_SERVER_IP_OR_DOMAIN_NAME>\n"
+        exit 3;
 fi
-
-#cp -p ./$SCRIPTNAME $SCRIPTDIR/$SCRIPTNAME
 
 
 #005 INSTALATION
@@ -59,14 +57,13 @@ sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" $CONF_DIR/$CONF_FILE
 
 
 cat > $CONF_DIR/$CONF_FILE.d/$CONF_ASUS <<- EOF
-	# ASUS WRT SPECIFIC OPTIONS FOR ZABBIX AGENT
-	# https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
+        # ASUS WRT SPECIFIC OPTIONS FOR ZABBIX AGENT
+        # https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
 
-	Hostname=$HOSTNAME
-	AllowKey=system.run[*]
-	AllowRoot=1
+        Hostname=$HOSTNAME
+        AllowKey=system.run[*]
+        AllowRoot=1
 EOF
-
 
 
 #007 STARTING AGENT
