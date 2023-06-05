@@ -15,7 +15,7 @@ CONF_FILE="zabbix_agentd.conf"
 CONF_DIR="/opt/etc"
 CONF_ASUS="asus_$CONF_FILE"
 
-ZBXAGFIND=$(opkg find zabbix-agentd)  # PACKAGE NAME: CHANGE IF NECESSARY.
+ZBXAGFIND=$(opkg find zabbix-agentd-openssl)  # PACKAGE NAME: CHANGE IF NECESSARY.
 ZBXAGVERSION=$(echo $ZBXAGFIND | cut -d " " -f 3)
 ZBXSERVER=$1  # ATENTION - THIS WILL ACCEPT ANY VALUE
 
@@ -46,7 +46,7 @@ fi
 
 #005 INSTALATION
 
-opkg install zabbix-agentd
+opkg install zabbix-agentd-openssl
 
 
 #006 WRINTING ASUSWRT CONFIGURATION FILE
