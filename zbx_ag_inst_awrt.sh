@@ -55,7 +55,7 @@ cp -p $CONF_DIR/$CONF_FILE $CONF_DIR/$CONF_FILE.bkp
 
 sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" $CONF_DIR/$CONF_FILE
 
-[[ ! -d $CONF_DIR/$CONF_FILE.d/$CONF_ASUS ]] && mkdir -v -p $CONF_DIR/$CONF_FILE.d
+[[ ! -d $CONF_DIR/$CONF_FILE.d ]] && mkdir -v -p $CONF_DIR/$CONF_FILE.d
 cat > $CONF_DIR/$CONF_FILE.d/$CONF_ASUS <<- EOF
         # ASUS WRT SPECIFIC OPTIONS FOR ZABBIX AGENT
         # https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
