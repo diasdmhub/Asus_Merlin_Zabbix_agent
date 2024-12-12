@@ -16,8 +16,8 @@ CONF_DIR="/opt/etc"
 CONF_ASUS="asus_$CONF_FILE"
 
 ZBXAGFIND=$(opkg find zabbix-agentd-openssl)  # PACKAGE NAME: CHANGE IF NECESSARY.
-ZBXAGVERSION=$(echo $ZBXAGFIND | cut -d " " -f 3)
-ZBXSERVER=$1  # ATENTION - THIS WILL ACCEPT ANY VALUE
+ZBXAGVERSION="$(echo $ZBXAGFIND | cut -d " " -f 3)"
+ZBXSERVER="$1"  # ATENTION - THIS WILL ACCEPT ANY VALUE
 
 
 #002 CHECK IF ZABBIX AGENT IS AVAILABLE
@@ -55,7 +55,7 @@ cp -p $CONF_DIR/$CONF_FILE $CONF_DIR/$CONF_FILE.bkp
 
 sed -i "s/Server=127.0.0.1/Server=$ZBXSERVER/" $CONF_DIR/$CONF_FILE
 
-
+[[ ! -d $CONF_DIR/$CONF_FILE.d/$CONF_ASUS ]] && mkdir -v -p $CONF_DIR/$CONF_FILE.d
 cat > $CONF_DIR/$CONF_FILE.d/$CONF_ASUS <<- EOF
         # ASUS WRT SPECIFIC OPTIONS FOR ZABBIX AGENT
         # https://github.com/diasdmhub/Zabbix_agent_Asus_Merlin
